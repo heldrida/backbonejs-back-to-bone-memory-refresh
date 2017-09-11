@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 
 app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')))
+app.use('/public', express.static(path.join(__dirname, '/public')))
 
 app.get('/', function (req, res) {
   res.sendfile(path.join(__dirname, '/index.html'))
