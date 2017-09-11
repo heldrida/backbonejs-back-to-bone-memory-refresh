@@ -41,6 +41,22 @@ const BlogView = Backbone.View.extend({
   initialize: function () {
     this.template = _.template($('.blogs-list-template').html())
   },
+  events: {
+    'click .edit-blog': 'edit'
+  },
+  edit: function () {
+    $('.edit-blog').hide()
+    $('.delete-blog').hide()
+    $('.update-blog').show()
+    $('.cancel').show()
+    const author = this.$('.author').html()
+    const title = this.$('.title').html()
+    const url = this.$('.url').html()
+
+    this.$('.author').html('<input type="text" class="form-control author-update" value=' + author + '>')
+    this.$('.title').html('<input type="text" class="form-control title-update" value=' + title + '>')
+    this.$('.url').html('<input type="text" class="form-control url-update" value=' + url + '>')
+  },
   render: function () {
     this.$el.html(this.template(this.model.toJSON()))
     return this
