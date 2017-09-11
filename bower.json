@@ -1,0 +1,18 @@
+{
+  "name": "backbonejs-back-to-bone-memory-refresh",
+  "homepage": "https://github.com/heldrida/ricardo-exemplos-2017",
+  "authors": [
+    "Helder <heldrida@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
