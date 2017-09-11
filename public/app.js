@@ -117,5 +117,3 @@ $(document).ready(function () {
     blogs.add(blog)
   })
 })
-
-console.log('foobar!')
